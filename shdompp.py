@@ -9,6 +9,7 @@ from numpy.polynomial.legendre import Legendre
 """
 This method follows PythonicDISORT: 
 https://github.com/LDEO-CREW/Pythonic-DISORT/blob/main/docs/Pythonic-DISORT.ipynb
+https://www.comsol.com/blogs/heat-transfer-in-participating-media-and-the-discrete-ordinates-method 
 But I will be implimenting it from the ground up, 
 excluding certain characteristics to just get the understanding.
 Implimented on 09/15/2025.
