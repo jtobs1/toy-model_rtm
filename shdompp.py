@@ -36,7 +36,6 @@ n_layers = len(tau_arr)
 
 # Configure columns:
 dx = np.arange(hgrid_points)
-dy = np.arange(hgrid_points)
 
 # Configure Quadrature Sets {directions, weights}
 n_quad = 16
