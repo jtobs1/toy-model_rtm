@@ -16,11 +16,14 @@ Implimented on 09/15/2025.
 Monochromatic; solving for intensity; using scattering, absorption, emissions, and phase function.
 
 Basic process:
-    1) represent intensity as a spherical harmonic expansion.
-    2) get the spherical harmonic coefficients.
-    3) convert from spherical harmonics back to angular intensity.
-    4) assuming spherically symmetric phase functions,
-
+    1) Transform Source Function to Discrete Ordinate.
+        - Use Legendre Polynomials for this (a_l,m).
+    2) Integrate Source Function in RTE to get Intensity (need a_l,m).
+        - Integrate "backwards."
+        - Source Function and Extinction are bilinearly interpolated between grid points. 
+    3) Transform Intensity back to Spherical Harmonics.
+        - Use Legendre Polynomials (again) with corresponding weights, w_j,k.
+    4) Convert Intensity in SH to Source Function.
 """
 
 '''Each "voxel" will contain its own single-scatter albedo, absorption, emissions, and phase function.
